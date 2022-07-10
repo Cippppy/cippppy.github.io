@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <title>March 2022</title>
+
+
+        <meta name="viewport" content="width=960px">
+
+        <style>
+          
+            *,*::before,*::after{
+            box-sizing: border-box;
+            }
+
+            html {
+                background-color: #fdfdfd;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: "Helvetica Neue";
+                font-size: 55px;
+            }
+            
+            .topnav {
+              overflow: auto;
+              background-color: #d8d8d8;
+              position: relative;
+              height: auto;
+              list-style-type: none;
+              width: 100%;
+              font-family: "Helvetica Neue";
+            }
+            
+            .topnav a {
+              float: left;
+              border-right:1px solid #bbb;
+              padding: 12px;
+              text-align: center;
+              text-decoration: none;
+              font-size: 17px;
+              width: 33.333%;
+            }
+
+            .topnav a:last-child {
+              float: left;
+              padding: 12px;
+              border-right:0px solid #bbb;
+              text-align: center;
+              text-decoration: none;
+              font-size: 17px;
+            }
+
+            .topnav a:not(.active) {
+              display: block;
+              color: black;
+              text-align: center;
+              padding: 12px;
+              text-decoration: none;
+            }
+            
+            .topnav a:hover:not(.active) {
+              background-color: #bbb;
+            }
+            
+            .topnav a.active {
+              background-color: #218aff;
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 12px;
+              text-decoration: none;
+            }
+            
+            @media screen and (max-width: 500px) {
+              .topnav a {
+                float: none;
+                display: block;
+                width: 100%;
+                text-align: left;
+              }
+            }
+
+            ul {list-style-type: none;}
+
+            body {
+                font-family: "Helvetica Neue";
+                padding-bottom: 100px;
+            }
+
+            .month {
+              padding: 70px 25px;
+              width: 75%;
+              background: #218aff;
+              text-align: center;
+              float: none;
+              position: relative;
+              top: 200px;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 50px;
+            }
+
+            a:visited { 
+                text-decoration: none; 
+                color: white; 
+            }
+
+            .month ul {
+              margin: 0;
+              padding: 0;
+              font-size: 50px;
+            }
+
+            .month ul li {
+              color: white !important;
+              font-size: 20px;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              font-size: 50px;
+              list-style-type: none;
+              text-decoration: none;
+            }
+
+            .month .prev {
+              float: left;
+              padding-top: 10px;
+              list-style-type: none;
+              text-decoration: none;
+            }
+
+            .month .next {
+              float: right;
+              padding-top: 10px;
+              list-style-type: none;
+              text-decoration: none;
+            }
+
+            .weekdays {
+              margin: 0;
+              padding: 10px 0;
+              background-color: #ddd;
+              float: none;
+              position: relative;
+              top: 101px;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 75%;
+              font-size: 35px;
+            }
+
+            .weekdays li {
+              display: inline-block;
+              width: 13.6%;
+              color: #666; 
+              text-align: center;
+            }
+
+            .days {
+              padding: 10px 0;
+              background: #eee;
+              margin: 0;
+              float: none;
+              position: relative;
+              top: 200px;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 75%;
+              font-size: 35px;
+              text-decoration: none;
+            }
+
+            .days li {
+              list-style-type: none;
+              display: inline-block;
+              width: 13.6%;
+              text-align: center;
+              margin-bottom: 5px;
+              font-size:25px;
+              color: black;
+              text-decoration: none;
+            }
+
+            .days li a {
+              list-style-type: none;
+              display: inline-block;
+              width: 13.6%;
+              text-align: center;
+              margin-bottom: 5px;
+              font-size:25px;
+              color: black;
+              text-decoration: none;
+            }
+
+            .days li:hover {
+              background-color: #218aff;
+              color: black;
+            }
+
+            .days li a:hover {
+              background-color: #218aff;
+              color: black;
+            }
+
+            .days li .active {
+              padding: 5px;
+              background: #218aff;
+              color: white !important
+            }
+
+            a:link { 
+                text-decoration: none; 
+                color:white;
+            }
+
+            /* Add media queries for smaller screens */
+            @media screen and (max-width:720px) {
+              .weekdays li, .days li {width: 13.1%;}
+            }
+
+            @media screen and (max-width: 420px) {
+              .weekdays li, .days li {width: 12.5%;}
+              .days li .active {padding: 2px;}
+            }
+
+            @media screen and (max-width: 290px) {
+              .weekdays li, .days li {width: 12.2%;}
+            }
+
+            </style>
+
+    </head>
+
+    <body>
+
+        <h1 style="text-align:center">Goodmornings & Goodnights</h1>
+
+        <div class="topnav">
+          <a href="file:///C:/Users/Cip/Documents/Anniversary/homePage.html">Home</a>
+          <a href="file:///C:/Users/Cip/Documents/Anniversary/ourPictures.html">Us In Pictures</a>
+          <a class="active" href="file:///C:/Users/Cip/Documents/Anniversary/goodMornings.html">Goodmornings & Goodnights</a>
+      </div>
+
+      <div class="month">      
+        <ul>
+          <li class="prev"><a style="text-decoration: none" href="file:///C:/Users/Cip/Documents/Anniversary/Months/February2022.html">&#10094;</a></li>
+          <li class="next"><a style="text-decoration: none" href="file:///C:/Users/Cip/Documents/Anniversary/Months/April2022.html">&#10095;</a></li>
+          <li>
+            March<br>
+            <span style="font-size:40px">2022</span>
+          </li>
+        </ul>
+      </div>
+      
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+      
+      <ul class="days">
+        <li></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtythree.html">1</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">2</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">3</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">4</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">5</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">6</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">7</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfour.html">8</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">9</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">10</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">11</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">12</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">13</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">14</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyfive.html">15</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">16</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">17</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">18</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">19</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">20</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">21</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtysix.html">22</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">23</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">24</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">25</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">26</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">27</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">28</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyseven.html">29</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyeight.html">30</a></li>
+        <li><a href="file:///C:/Users/Cip/Documents/Anniversary/Weeks/WeekThirtyeight.html">31</a></li>
+      </ul>
+
+    </body>
+
+</html>
