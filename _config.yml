@@ -1,0 +1,3 @@
+baseurl: /Anniversary
+
+{{ cippppy.github.go.baseurl }}{{ post.url }}
