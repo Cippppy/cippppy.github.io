@@ -11,5 +11,5 @@ kramdown:
 
 baseurl: /Anniversary
 
-{{ cippppy.github.io.baseurl }}
-{{ /goodMornings.html }}
+{{ cippppy.github.io.baseurl/goodMornings }}
+{{  }}
