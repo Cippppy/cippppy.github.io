@@ -10,7 +10,7 @@
         <style>
 
 
-            *,*::before,*::after{
+*,*::before,*::after{
             box-sizing: border-box;
             }
 
@@ -31,13 +31,13 @@
             h2 {
               text-align: center;
               font-family: "Helvetica Neue";
-              font-size: 50px;
+              font-size: 200%;
               padding-bottom:18%;
             }
             
             img {
-              width: 50%;
-              padding-bottom:10px;
+              width: 85%;
+              padding-bottom: 10px;
             }           
 
             .topnav {
@@ -101,7 +101,7 @@
 
             .month li{
               padding: 2% 0px;
-              width: 50%;
+              width: 45%;
               background: #218aff;
               text-align: center;
               float: none;
@@ -132,9 +132,9 @@
             }
 
             .pic li{
-              padding: 10px 0px;
-              width: 65%;
-              background: #bbb;
+              padding: 0px 0px;
+              width: 35%;
+              background-color: #bbb;
               text-align: center;
               float: none;
               position: relative;
@@ -172,6 +172,53 @@
                 text-decoration: none; 
                 color: white; 
             }
+
+            .pic2{
+              padding-bottom:0%;
+              border-bottom:4px solid black;
+            }
+
+            .pic2 li{
+              padding: 0px 0px;
+              width: 80%;
+              background: #bbb;
+              text-align: center;
+              float: none;
+              position: relative;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 0px;
+              text-decoration: none;
+              list-style-type: none;
+              border-color: black;
+              bottom: 0px;
+              padding-bottom: 0px;
+            }
+
+            .pic2 .column {
+              float: left;
+              width: 25%;
+              padding-bottom: 0px;
+              margin-bottom:-7%;
+            }
+
+            .pic2 .row:after {
+              content: "";
+              display: table;
+              clear: both;
+              padding-bottom: 0px;
+              bottom:0px;
+            }
+
+            a:link { 
+                text-decoration: none; 
+                color:white;
+            }
+
+            a:visited { 
+                text-decoration: none; 
+                color: white; 
+            }
             
             @media screen and (max-width: 500px) {
               .topnav a {
@@ -185,6 +232,26 @@
                 width: 100%;
                 padding-bottom: 0px;
                 bottom: 0px;
+              }
+
+              .month {
+                font-size:100%;
+              }
+
+              .month li {
+                font-size:100%;
+              }
+
+              .pic2 h2 {
+                font-size:150%;
+              }
+
+              h2 {
+                font-size:125%;
+              }
+
+              .pic h2 {
+                font-size:125%;
               }
 
             }
