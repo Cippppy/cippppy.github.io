@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HeartMoji</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+            html {
+                background-color: #fdfdfd;
+            }
+            h1 {
+                text-align: center;
+                font-family: "Helvetica Neue";
+                font-size: 350%;
+            }
+            h2 {
+              padding-top: 50px;
+              text-align: center;
+              font-family: "Helvetica Neue";
+              font-size: 338%;
+            }
+            @media screen and (max-width: 500px) {
+              .topnav a {
+                float: none;
+                display: block;
+                width: 100%;
+                text-align: left;
+              }
+              .column {
+                width: 100%;
+              }
+              .month {font-size: 35%;}
+            }
+            /* Add media queries for smaller screens */
+            @media screen and (max-width:720px) {
+              .month {font-size: 35%;}
+            }
+            @media screen and (max-width: 420px) {
+              .month {font-size: 35%;}
+            }
+            @media screen and (max-width: 290px) {
+              .month {font-size: 35%;}
+            }
+        </style>
+    </head>
+
+    <script>
+        function httpGet(theUrl) {
+            let xmlHttpReq = new XMLHttpRequest();
+        xmlHttpReq.open("GET", theUrl, false);
+        xmlHttpReq.send(null);
+        return xmlHttpReq.responseText;
+        }
+        document.getElementById("spanId").innerText = JSON.parse(httpGet("https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=0")).title;
+    </script>
+
+    <body>
+        <h1 style="text-align:center">HeartMoji Control</h1>
+        <h2>Current HeartMoji Status</h2>
+        <li><a style="text-decoration: none" href="" onclick="httpGet("https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=0")">Off</a></li>
+        <li><a style="text-decoration: none" href="" onclick="httpGet("https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=1")">On</a></li>
+        <div>post title: <span id="spanId"></span></div>
+    </body>
+</html>
