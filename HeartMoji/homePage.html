@@ -8,6 +8,10 @@
             html {
                 background-color: #fdfdfd;
             }
+            body {
+                font-family: "Helvetica Neue";
+                padding-bottom: 200px;
+            }
             h1 {
                 text-align: center;
                 font-family: "Helvetica Neue";
@@ -17,19 +21,53 @@
               padding-top: 50px;
               text-align: center;
               font-family: "Helvetica Neue";
-              font-size: 338%;
+              font-size: 300%;
+            }
+            h3 {
+              padding-top: 10px;
+              text-align: center;
+              font-family: "Helvetica Neue";
+              font-size: 250%;
+            }
+            .butt li{
+              padding: 15px 30px;
+              width: 75%;
+              background: #218aff;
+              text-align: center;
+              float: none;
+              position: relative;
+              top: 30px;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 200%;
+              text-decoration: none;
+              list-style-type: none;
+              border-color: black;
+              border-width:5px;
+              border:2px solid black;
+            }
+            .butt .column {
+              float: left;
+              width: 50%;
+            }
+            .butt .row:after {
+              content: "";
+              display: table;
+              clear: both;
+              padding-bottom: 40px;
+            }
+            a:link { 
+                text-decoration: none; 
+                color:white;
+            }
+            a:visited { 
+                text-decoration: none; 
+                color: white; 
             }
             @media screen and (max-width: 500px) {
-              .topnav a {
-                float: none;
-                display: block;
-                width: 100%;
-                text-align: left;
-              }
               .column {
                 width: 100%;
               }
-              .month {font-size: 35%;}
             }
             /* Add media queries for smaller screens */
             @media screen and (max-width:720px) {
@@ -43,22 +81,88 @@
             }
         </style>
     </head>
-
     <script>
-        function httpGet(theUrl) {
-            let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open("GET", theUrl, false);
-        xmlHttpReq.send(null);
-        return xmlHttpReq.responseText;
+        const Http = new XMLHttpRequest();
+        const url = "https://api.thingspeak.com/channels/2145731/fields/1.json?api_key=8CM5LUYILARXBHTV&results=2";
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+            myFunction(myArr);
+          }
+        };
+        Http.open("GET", url, true);
+        Http.send();
+      function myFunction(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i < arr.length; i++) {
+          out += '<a href="' + arr[i].url + '">' + 
+            arr[i].display + '</a><br>';
         }
-        document.getElementById("spanId").innerText = JSON.parse(httpGet("https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=0")).title;
+        document.getElementById("id01").innerHTML = out;
+      }
+      function httpOff(event) {
+        event.preventDefault();
+        for (let i=0; i < 5; i++) {
+          const Http = new XMLHttpRequest();
+          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=0';
+          for (let i = 0; i < 20; i++) {
+            Http.open("GET", url, true);
+            Http.send();
+          }
+        }   
+      }  
+      function httpOn(event) {
+        event.preventDefault();
+        for (let i=0; i < 5; i++) {
+          const Http = new XMLHttpRequest();
+          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=1';
+          for (let i = 0; i < 20; i++) {
+            Http.open("GET", url);
+            Http.send();
+          }
+        }  
+      }
+      function httpSpin(event) {
+        event.preventDefault();
+        for (let i=0; i < 5; i++) {
+          const Http = new XMLHttpRequest();
+          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field2=2';
+          for (let i = 0; i < 20; i++) {
+            Http.open("GET", url);
+            Http.send();
+          }
+        }
+      }  
+      function httpStable(event) {
+        event.preventDefault();
+        for (let i=0; i < 5; i++) {
+          const Http = new XMLHttpRequest();
+          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field2=1';
+          for (let i = 0; i < 20; i++) {
+            Http.open("GET", url);
+            Http.send();
+          }
+        }
+      }  
     </script>
 
     <body>
-        <h1 style="text-align:center">HeartMoji Control</h1>
-        <h2>Current HeartMoji Status</h2>
-        <li><a style="text-decoration: none" href="" onclick="httpGet("https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=0")">Off</a></li>
-        <li><a style="text-decoration: none" href="" onclick="httpGet("https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=1")">On</a></li>
-        <div>post title: <span id="spanId"></span></div>
+      <h1 style="text-align:center">HeartMoji Control</h1>
+      <h2>Current HeartMoji Status</h2>
+      <h3>Power Mode Select</h3>
+      <div class = "butt">
+        <div class = "row">
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpOff(event)">Off</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpOn(event)">On</a></li></div>
+        </div>
+      </div>
+      <h3>LED Mode Select </h3>
+      <div class = "butt">
+        <div class = "row">
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpSpin(event)">Spin</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpStable(event)">Stable</a></li></div>
+        </div>
+      </div>
     </body>
 </html>
