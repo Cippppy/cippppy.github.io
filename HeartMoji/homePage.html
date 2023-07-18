@@ -4,6 +4,7 @@
         <title>HeartMoji</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <style>
             html {
                 background-color: #fdfdfd;
@@ -55,6 +56,9 @@
               display: table;
               clear: both;
               padding-bottom: 40px;
+            }
+            .powerStatus {
+              text-align: center;
             }
             a:link { 
                 text-decoration: none; 
@@ -150,18 +154,28 @@
     <body>
       <h1 style="text-align:center">HeartMoji Control</h1>
       <h2>Current HeartMoji Status</h2>
+      <div class = "powerStatus"></div>
+      <script>
+        $.getJSON('https://api.thingspeak.com/channels/2145731/fields/1.json?api_key=8CM5LUYILARXBHTV&results=2', function(data) {
+    
+            var text = `Power Mode = ${data.feeds[0].field1}
+                        LED Mode = ${data.feeds[1].field2} `
+    
+            $(".powerStatus").html(text);
+        });
+      </script>
       <h3>Power Mode Select</h3>
       <div class = "butt">
         <div class = "row">
-          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpOff(event)">Off</a></li></div>
-          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpOn(event)">On</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpOff(event)">Off (0)</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpOn(event)">On (1)</a></li></div>
         </div>
       </div>
       <h3>LED Mode Select </h3>
       <div class = "butt">
         <div class = "row">
-          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpSpin(event)">Spin</a></li></div>
-          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpStable(event)">Stable</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpSpin(event)">Spin (2)</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpStable(event)">Stable (1)</a></li></div>
         </div>
       </div>
     </body>
