@@ -86,25 +86,6 @@
         </style>
     </head>
     <script>
-        const Http = new XMLHttpRequest();
-        const url = "https://api.thingspeak.com/channels/2145731/fields/1.json?api_key=8CM5LUYILARXBHTV&results=2";
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            myFunction(myArr);
-          }
-        };
-        Http.open("GET", url, true);
-        Http.send();
-      function myFunction(arr) {
-        var out = "";
-        var i;
-        for(i = 0; i < arr.length; i++) {
-          out += '<a href="' + arr[i].url + '">' + 
-            arr[i].display + '</a><br>';
-        }
-        document.getElementById("id01").innerHTML = out;
-      }
       function httpOff(event) {
         event.preventDefault();
         for (let i=0; i < 5; i++) {
@@ -131,18 +112,18 @@
         event.preventDefault();
         for (let i=0; i < 5; i++) {
           const Http = new XMLHttpRequest();
-          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field2=2';
+          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=2';
           for (let i = 0; i < 20; i++) {
             Http.open("GET", url);
             Http.send();
           }
         }
       }  
-      function httpStable(event) {
+      function httpBlink(event) {
         event.preventDefault();
         for (let i=0; i < 5; i++) {
           const Http = new XMLHttpRequest();
-          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field2=1';
+          const url='https://api.thingspeak.com/update?api_key=RT1HD9A5RG0YZOVC&field1=3';
           for (let i = 0; i < 20; i++) {
             Http.open("GET", url);
             Http.send();
@@ -157,11 +138,11 @@
       <div class = "powerStatus"></div>
       <script>
         $.getJSON('https://api.thingspeak.com/channels/2145731/fields/1.json?api_key=8CM5LUYILARXBHTV&results=2', function(data) {
+
+
+          var powerMode = `${data.feeds[1].field1}`
     
-            var text = `Power Mode = ${data.feeds[0].field1}
-                        LED Mode = ${data.feeds[1].field2} `
-    
-            $(".powerStatus").html(text);
+            $(".powerStatus").html(powerMode);
         });
       </script>
       <h3>Power Mode Select</h3>
@@ -175,7 +156,7 @@
       <div class = "butt">
         <div class = "row">
           <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpSpin(event)">Spin (2)</a></li></div>
-          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpStable(event)">Stable (1)</a></li></div>
+          <div class = "column"><li><a style="text-decoration: none" href="" onclick="httpBlink(event)">Blink (3)</a></li></div>
         </div>
       </div>
     </body>
