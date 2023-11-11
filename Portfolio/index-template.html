@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="The portfolio site of Ana Oharciuc.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hi, I'm Ana!</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+        <link rel="shortcut icon" href="projimg/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="projimg/favicon.ico" type="image/x-icon">
+    </head>
+    <body onload="document.getElementById('defaultOpen').click();">
+        <header class="menu">
+          <div class="menu-container">
+            <tab>
+              <a href="#about">ABOUT</a>
+              <a href="#experience">EXPERIENCE</a>
+              <a href="#projects">PROJECTS</a>
+              <a href="#contact">CONTACT</a>
+              <a href="https://www.linkedin.com/in/anaoharciuc/" target="_blank">LINKEDIN</a>
+              <div class="animations start"></div>
+            </tab>
+          </div>
+          </header>
+        <div class="title-section" id="about">
+          <div id="subtitle">Hi, I'm</div>
+          <div id="title-container"><div id="title">Ana Oharciuc</div></div>
+        </div>
+        <div class="content">
+          <div class="intro">
+            <div class="info-container">
+              <p>Hi! I'm Ana, and I'm a Computer Science student born and raised in South Jersey. I've been passionate about web and software development since the day I checked out the book <i>Make Your Own Web Page--For Kids!</i> at my local library when I was ten years old. Since then I've surrounded myself with technology: building my own PC, working in tech environments, and challenging myself to find and solve new problems every day I can.</p>
+              <p>Outside of the tech world, I also love music, film, and video games! Feel free to check out my <a href="https://open.spotify.com/user/fleas.on.rats">Spotify</a> and <a href="https://letterboxd.com/fleasonrats/">Letterboxd</a>.</p>
+              <p>I am a full-time college student and looking for internships related to software engineering, web development, and cybersecurity!</p>
+              <div class="basic-container"><button class="contentbtn" name="View resume" onclick="resumelnk()">View my resume!</button></div>
+            </div>
+            <div class="headshot"></div>
+          </div>
+          <div class="experience" id="experience">
+            <h1>Experience</h1>
+            <p style="text-align: justify;">I am self-taught in a variety of skills and also have had a traditional learning experience in a vocational-technical high school and university. I started professionally working in IT in 2021 as a help desk intern; I was promoted to a full time PC Technician a year later. I am currently seeking to transition into the software and web development industry.</p>
+            <div class="experience-container">
+              <div class="work">
+                <h2>Work Experience</h2>
+                <div class="tab">
+                  <button class="tabbtn active" onclick="openTab(event, 'GCIT')" id="defaultOpen">GCIT</button>
+                  <button class="tabbtn" onclick="openTab(event, 'GCIT2')">GCIT (Internship)</button>
+                </div>
+                <div id="GCIT" class="tabcontent">
+                  <h3>PC Technician Level 1</h3>
+                  <div class="company">Gloucester County Institute of Technology, 2022-present</div>
+                  <ul>
+                    <li>Configure, troubleshoot, and repair equipment, devices, and software on a 4-campus educational network</li>
+                    <li>Assist with the management and development of a large-scale MySQL database encompassing all district users and devices</li>
+                    <li>Evaluate and develop quality-of-life solutions to the district's inventory system using C# and XAML</li>
+                  </ul>
+                </div>
+                <div id="GCIT2" class="tabcontent">
+                  <h3>Student Technician Internship</h3>
+                  <div class="company">Gloucester County Institute of Technology, 2021-2022</div>
+                  <ul>
+                    <li> Provided technical support across a multi-campus school district with 1600+ students and 500+ staff</li>
+                    <li>Singlehandedly completed over 230 technical support tickets as of May 2022, alongside many cooperative tickets and projects with other team members</li>
+                    <li>Created documentation and procedure files still in use today that increased efficiency and overall knowledge of asset management, configuration, and locations</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="projects" id="projects">
+                <h1>Projects</h1>
+                <p style="text-align: justify;">More added as new projects are completed!</p>
+                <article class="project">
+                  <img src="projimg/ipgpic.png" id="proj-img" alt="Project image">
+                  <h3 id="name">PROJECT NAME</h3>
+                  <a href="LINK" target="_blank" id="project-link"><p id="prompt">OPEN IN BROWSER</p></a>
+                  <p id="description">DESCRIPTION</p>
+                  <p id="skills">SKILLS</p>
+                  <button class="prev-btn">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                  </button>
+                  <button class="next-btn">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                  </button>
+                  <div id="project-counter"><span id="id">1</span> / <span id="total">1</span></div>
+                </article>
+              </div>
+              <div class="skills">
+                <h2>Skills & Technologies</h2>
+                <p style="margin-bottom: -0.625rem;">The following are languages and technologies that I have used in personal projects, relevant coursework, or professional assignments!</p>
+                <div class="skills-container"><div class="languages"><ul>
+                  <li>HTML & CSS</li>
+                  <li>JavaScript</li>
+                  <li>XAML/WPF</li>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>C#</li>
+                </ul></div>
+                <div class="tech"><ul>
+                  <li>Windows & Linux environments</li>
+                  <li>Git and GitHub</li>
+                  <li>Azure Active Directory</li>
+                  <li>Microsoft Endpoint Manager</li>
+                </ul></div></div>
+              </div>
+            </div>
+            <div class="basic-container"><button class="contentbtn" name="View LinkedIn" onclick="linkedinlnk()">View my LinkedIn!</button></div>
+          </div>
+          <div class="contact" id="contact">
+            <h1>Contact</h1>
+            <div class="contact-container">
+              <p><b>Email</b></p>
+              <div class="copy-container">
+                <input type="text" value="anamariaoharciuc@gmail.com" class="contact-copy" id="email" readonly>
+              <button onclick="copy('email')" class="copy-button" id="copyemail">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              </div>
+              <p><b>Discord</b></p>
+              <div class="copy-container">
+                <input type="text" value="fleasonrats#4654" class="contact-copy" id="discord" readonly>
+              <button onclick="copy('discord')" class="copy-button" id="copydiscord">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              </div>
+            </div>
+            <div class="social-container">
+              <abbr title="GitHub"><a href="https://github.com/anaoharc" target="_blank"><i class="fa-brands fa-github"></i></a></abbr>
+              <abbr title="Twitter"><a href="https://twitter.com/anaoharc" target="_blank"><i class="fa-brands fa-twitter"></i></a></abbr>
+              <abbr title="Mastodon"><a href="https://mstdn.social/@fleasonrats" target="_blank"><i class="fa-brands fa-mastodon"></i></a></abbr>
+              <abbr title="Instagram"><a href="https://www.instagram.com/anaoharc/" target="_blank"><i class="fa-brands fa-instagram"></i></a></abbr>
+            </div>
+          </div>
+        </div>
+        <script src="index.js"></script>
+        <script defer src="/_vercel/insights/script.js"></script>
+    </body>
+    <footer>
+      <p>last updated 01/03/2023. anaoharc.dev credit to ana oharciuc. icons credited to font awesome.<br>images credit to ana oharciuc and the odin project.<br>this website stores no personal or technical information of the visitor.</p>
+    </footer>
+</html>
