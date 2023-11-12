@@ -8319,9 +8319,9 @@ h1, h2, h3, h4, h5,
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background-color: #0a1146;
+    background-color: #d9d9d9;
     margin: 0 auto;
-    color: #fff;
+    color: #284b63;
     text-align: left;
   }
   
@@ -8365,7 +8365,7 @@ h1, h2, h3, h4, h5,
   }
 
   a:hover {
-    color: #fff;
+    color: #284b63;
   }
     
   .menu {
@@ -8387,7 +8387,7 @@ h1, h2, h3, h4, h5,
   }
     
   tab {
-    background-color: #0a2e46; /* #294a6d */
+    background-color: #3c6e71; /* #294a6d */
     margin: 0px;
     padding: 0px;
     border-radius: 8px;
@@ -8454,7 +8454,7 @@ h1, h2, h3, h4, h5,
 
   #subtitle {
     font-size: 1.75em;
-    color: #fff;
+    color: #284b63;
   }
 
   #title-container {
@@ -8464,9 +8464,9 @@ h1, h2, h3, h4, h5,
   #title {
     font-size: 3.75rem;
     font-weight: bold;
-    color: #fff;
+    color: #284b63;
     overflow: hidden;
-    border-right: 0.05em solid #fff;
+    border-right: 0.05em solid #284b63;
     white-space: nowrap;
     width: 0;
     letter-spacing: 0.05em;
@@ -8480,7 +8480,7 @@ h1, h2, h3, h4, h5,
 
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% {border-color: #fff; }
+    50% {border-color: #284b63; }
   }
   
   .intro {
@@ -8530,8 +8530,8 @@ h1, h2, h3, h4, h5,
     max-width: 100%;
     margin: 0 auto;
     background-color: transparent;
-    color: #fff;
-    border: 1px solid #1abc9c;
+    color: #284b63;
+    border: 1px solid #3c6e71;
     border-radius: 8px;
     font-size: 1.5em;
     font-weight: lighter;
@@ -8565,11 +8565,11 @@ h1, h2, h3, h4, h5,
   .tab {
     overflow: hidden;
     display: flex;
-    border-bottom: 1px solid #1abc9c;
+    border-bottom: 1px solid #3c6e71;
   }
 
   .tab button {
-    background-color: #051c2c;
+    background-color: #3c6e71;
     flex: 1;
     border: none;
     outline: none;
@@ -8602,7 +8602,7 @@ h1, h2, h3, h4, h5,
   }
 
   .company {
-    color: #a3a3a3;
+    color: #353535;
     font-style: italic;
     margin-top: -0.938rem;
     margin-bottom: -0.938rem;
@@ -8637,12 +8637,18 @@ h1, h2, h3, h4, h5,
   }
 
   .languages {
-    max-width: 50%;
+    max-width: 33.33%;
     flex: 1;
   }
 
-  .tech {
-    max-width: 50%;
+  .software {
+    max-width: 33.33%;
+    flex: 1;
+  }
+
+  .hardware {
+    max-width: 33.33%;
+    flex: 1;
   }
 
   .extracurriculars {
@@ -8653,16 +8659,18 @@ h1, h2, h3, h4, h5,
 
   .extracurriculars-container {
     margin: 0 auto;
-    width: 90%;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     padding: 0.625rem 0.313rem;
     margin-bottom: 2rem;
     border-radius: 8px;
-    background-color: #051c2c;
+    background-color: #d9d9d9;
+    border-color: #1abc9c;
     transition: all 1s;
     box-shadow: rgba(0, 0, 0, .2);
     text-align: center;
+    border: 1px solid #1abc9c;
   }
   
   .project {
@@ -8672,7 +8680,7 @@ h1, h2, h3, h4, h5,
     padding: 0.625rem 0.313rem;
     margin-bottom: 5rem;
     border-radius: 8px;
-    background-color: #051c2c;
+    background-color: #3c6e71;
     transition: all 1s;
     box-shadow: rgba(0, 0, 0, .2);
     text-align: center;
@@ -8686,7 +8694,7 @@ h1, h2, h3, h4, h5,
   }
   
   #skills {
-    color: #a3a3a3;
+    color: #353535;
     font-style: italic;
   }
 
@@ -8702,7 +8710,7 @@ h1, h2, h3, h4, h5,
   }
 
   .prev-btn:hover, .next-btn:hover {
-    color: #fff;
+    color: #284b63;
   }
 
   .project-counter {
@@ -8727,7 +8735,7 @@ h1, h2, h3, h4, h5,
 
   .contact-copy {
     width: 90%;
-    background-color: #0a2e46;
+    background-color: #3c6e71;
     color: #fff;
     border: 1px solid #1abc9c;
   }
@@ -8758,7 +8766,7 @@ h1, h2, h3, h4, h5,
   
   footer {
     text-align: center;
-    color: #fff;
+    color: #353535;
     font-size: 0.625em;
     padding: 0.313rem;
   }

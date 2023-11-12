@@ -29,7 +29,7 @@ const projects = [
         projname: "Smart Home Lockbox",
         skills: "Embedded C, Altium Designer, Github",
         link: "https://github.com/Cippppy/SmartHomeLockbox",
-        img: "img/ipgpic.png",
+        img: "img/lockBox.png",
         description: "A tool that will allow people to lock their important items.",
         prompt: "OPEN ON GITHUB"
     },
@@ -38,7 +38,7 @@ const projects = [
         projname: "Move To Change",
         skills: "Java, HTML, CSS",
         link: "https://github.com/Cippppy/MoveToChange",
-        img: "img/toplogo.png",
+        img: "img/move_to_change.png",
         description: "Java application with GUI that allows activist organizations to connect members easier.",
         prompt: "OPEN ON GITHUB"
     },
@@ -52,11 +52,11 @@ const projects = [
         prompt: "OPEN ON GITHUB"
     },
     {
-        id: 3,
+        id: 4,
         projname: "HeartMoji",
         skills: "Arduino C++, Altium Designer, Github, HTML, Javascript",
         link: "https://github.com/Cippppy/HeartMoji",
-        img: "img/toplogo.png",
+        img: "img/heartmoji.png",
         description: "HeartMoji is a personal project I did for my 2nd anniversary of dating my girlfriend. It consists of a website, esp8266, and soldered PCB.",
         prompt: "OPEN ON GITHUB"
     }
