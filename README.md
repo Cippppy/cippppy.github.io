@@ -13,5 +13,5 @@ This repository is the home of all the personal websites that I host. As of Nove
 ## 📫 Contact Info
 1. [My Linkedin Profile](https://www.linkedin.com/in/christian-cipolletta/)
 2. [My Github Profile](https://github.com/Cippppy)
-3. [My School Email](cipoll17@students.rowan.edu)
-4. [My Personal Email](cjcipbiz@gmail.com)
+3. My School Email: cipoll17@students.rowan.edu
+4. My Personal Email: cjcipbiz@gmail.com
