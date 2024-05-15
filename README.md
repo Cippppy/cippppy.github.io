@@ -9,8 +9,9 @@ This repository is the home of all the personal websites that I host. As of Nove
 ## ⚡ Repository Links
 1. [Portfolio](https://github.com/Cippppy/ChristianPortfolio)
 2. [HeartMoji](https://github.com/Cippppy/HeartMoji)
-3. [Good Mornings & Goodnights](https://github.com/Cippppy?tab=repositories)
 
 ## 📫 Contact Info
 1. [My Linkedin Profile](https://www.linkedin.com/in/christian-cipolletta/)
 2. [My Github Profile](https://github.com/Cippppy)
+3. [My School Email](cipoll17@students.rowan.edu)
+4. [My Personal Email](cjcipbiz@gmail.com)
